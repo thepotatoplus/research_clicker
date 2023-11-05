@@ -16,7 +16,7 @@
     }
 
     :global(body) {
-        background: gradient(var(--black), blue);
+        background: var(--black);
         min-height: 100vh;
 
         display: flex;
