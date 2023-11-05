@@ -10,6 +10,7 @@ let scientistrpps = 1;
 let scientistAmount = 0;
 let scientistUpgrades = 0;
 let currentAchievements = 0;
+let scientistrpccupgrades = 0;
 setInterval(function() {
   clicks += rpps
 },1000)
@@ -32,15 +33,20 @@ setInterval(function() {
     {:else if rppcUpgrades == 0}
         Stronger Hammers - +1 research point per click - 5 Research Points
 {/if}
+{#if clicks > 2499 && rppcUpgrades > 0 && scientistAmount > 19 && scientistrpccupgrades == 0}
+    <a on:click={()=> {clicks -= 2500 ; scientistrpccupgrades += 1 ; rppc += 10 ; currentUpgrades += 1 ; scientistrpps *= 2 ; rpps += scientistAmount * scientistrpps / 2}}>Better Tools - +10 research points per click, scientists give double research points per second - 2500 Research Points</a>
+    {:else if rppcUpgrades > 0 && scientistAmount >19 && scientistrpccupgrades == 0}
+        Better Tools - +10 research points per click, scientists give double research points per second - 2500 Research Points
+{/if}
 <a></a>
 {#if scientistAmount > 4 && clicks > 49 && scientistUpgrades == 0}
-    <a on:click={()=> {clicks -= 50 ; scientistUpgrades += 1 ; rpps += scientistAmount ; scientistrpps += 1 ; currentUpgrades += 1}}>Better Scientific Method - Scientists give one more research point per second - 50 Research Points</a>
+    <a on:click={()=> {clicks -= 50 ; scientistUpgrades += 1 ; scientistrpps *= 2 ; currentUpgrades += 1; rpps += scientistAmount * scientistrpps / 2}}>Better Scientific Method - Scientists give one more research point per second - 50 Research Points</a>
     {:else if scientistAmount > 4 && scientistUpgrades == 0}
-        Better Scientific Method - Scientists give one more research point per second - 50 Research Points
+        Better Scientific Method - Scientists give double research points per second - 50 Research Points
 {/if}
 {#if scientistAmount > 14 && clicks > 999 && scientistUpgrades == 1}
-    <a on:click={()=> {clicks -= 1000 ; scientistUpgrades += 1 ; rpps += scientistAmount * 2 ; scientistrpps *= 2 ; currentUpgrades += 1}}>Smarter Scientists - Scientists gain double research points per second - 1000 Research Points</a>
-    {:else if scientistAmount > 24 && scientistUpgrades == 1}
+    <a on:click={()=> {clicks -= 1000 ; scientistUpgrades += 1 ; scientistrpps *= 2 ; rpps += scientistAmount * scientistrpps / 2; currentUpgrades += 1}}>Smarter Scientists - Scientists gain double research points per second - 1000 Research Points</a>
+    {:else if scientistAmount > 14 && scientistUpgrades == 1}
         Smarter Scientists - Scientists gain double research points per second - 1000 Research Points
 {/if}
 <h1>Achievements</h1>
@@ -48,5 +54,5 @@ setInterval(function() {
     Science Team - You have hired at least 10 scientists.
 {/if}
 {#if scientistAmount > 499}
-    Bill Nye - You have hired at least 500 scientists.
+    The Science Guy - You have hired at least 500 scientists.
 {/if}
