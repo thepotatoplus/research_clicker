@@ -40,36 +40,36 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#38312b;fill-opacity:1;stroke-width:12;stroke-linecap:square"
+       style="fill:#5a2f01;fill-opacity:1;stroke-width:12;stroke-linecap:square"
        id="rect1134"
        width="250"
        height="250"
        x="0"
        y="0" />
     <rect
-       style="fill:#725137;fill-opacity:1;stroke-width:11.3122;stroke-linecap:square"
+       style="fill:#99643c;fill-opacity:1;stroke-width:10.7283;stroke-linecap:square"
        id="rect1150"
-       width="235.67113"
-       height="235.67113"
-       x="7.1644378"
-       y="7.1644378"
-       ry="49.407497" />
+       width="223.50732"
+       height="223.50732"
+       x="13.246337"
+       y="13.246337"
+       ry="46.857407" />
     <path
        id="path1371"
-       style="fill:#a87751;fill-opacity:1;stroke:#38312b;stroke-width:5;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffa662;fill-opacity:1;stroke:none;stroke-width:5;stroke-linecap:square;stroke-dasharray:none;stroke-opacity:1"
        d="M 57.440582,192.60414 C 76.586905,211.75046 106.89243,212.48722 154.52344,164.85621 200.31222,119.06742 215.55983,72.777538 196.41351,53.63122 177.26719,34.484893 133.11736,47.592463 85.188526,95.521297 38.547493,142.16233 38.294275,173.45783 57.440582,192.60414 Z"
        sodipodi:nodetypes="sssss" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono Bold';fill:#ffffff;fill-opacity:1;stroke-width:3.175;stroke-linecap:square"
-       x="-79.997711"
-       y="182.06342"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono Bold';fill:#ffffff;fill-opacity:1;stroke-width:3.175;stroke-linecap:square;stroke:none"
+       x="-78.906998"
+       y="184.03902"
        id="text236"
        transform="rotate(-45)"><tspan
          sodipodi:role="line"
          id="tspan234"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono Bold';fill:#ffffff;fill-opacity:1;stroke-width:3.175"
-         x="-79.997711"
-         y="182.06342">Potato++</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:35px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono Bold';fill:#ffffff;fill-opacity:1;stroke-width:3.175;stroke:none"
+         x="-78.906998"
+         y="184.03902">Potato++</tspan></text>
   </g>
 </svg>

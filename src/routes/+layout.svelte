@@ -32,7 +32,17 @@
         min-width: 290px;
     }
 
+    :global(.row) {
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
     :global(img) {
         width: 64px;
+    }
+
+    :global(p) {
+        margin: 10px;
     }
 </style>
