@@ -15,8 +15,8 @@
     <p><a href="researchclicker">Research Clicker</a></p>
     <h1>Credits</h1>
     <section class='row'>
-        <Button href='#' content='neogloven' />
-        <Button href='#' content='the potato' />
+        <Button href='#' content='neogloven - graphic design + coding' />
+        <Button href='#' content='the potato - coding + game ideas' />
     </section>
 
 </section>
