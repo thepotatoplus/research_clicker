@@ -1,3 +1,3 @@
+<img src='/potatoplusplus.svg' width = 64 height = 64> 
 <h1>Welcome to SvelteKit</h1>
 <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<img src='/potatoplusplus.svg'>
