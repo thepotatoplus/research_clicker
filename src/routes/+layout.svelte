@@ -33,6 +33,6 @@
     }
 
     :global(img) {
-        width: 100px;
+        width: 64px;
     }
 </style>
