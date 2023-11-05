@@ -31,4 +31,8 @@
         width: 50vw;
         min-width: 290px;
     }
+
+    :global(img) {
+        width: 100px;
+    }
 </style>
