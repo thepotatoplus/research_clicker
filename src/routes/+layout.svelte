@@ -6,6 +6,8 @@
         --gray: rgb(54, 53, 61);
         --light-gray: rgb(142, 170, 192);
         --white: rgb(240, 246, 253);
+        --dark-blue: rgb(15 15 60);
+        --blue: rgb(20 20 120);
 
         color: var(--white);
 
@@ -17,7 +19,7 @@
     }
 
     :global(body) {
-        background: var(--black);
+        background: linear-gradient(0deg, var(--dark-blue), var(--blue));
         min-height: 100vh;
 
         display: flex;
