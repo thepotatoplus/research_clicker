@@ -12,6 +12,7 @@
         play them.
     </p>
     <p><a href="https://github.com/neogloven/ppp">Source Code</a></p>
+    <p><a href="https://discord.gg/Kp7csKAtVz">Discord</a></p>
     <h1>Games</h1>
     <p><a href="researchclicker">Research Clicker</a></p>
     <h1>Credits</h1>

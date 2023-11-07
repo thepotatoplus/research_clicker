@@ -6,6 +6,8 @@
         --gray: rgb(54, 53, 61);
         --light-gray: rgb(142, 170, 192);
         --white: rgb(240, 246, 253);
+        --blue: rgb(10, 10, 50);
+        --teal: rgb(10, 50, 50);
         color: var(--white);
 
         font-family: sans-serif;
@@ -16,7 +18,7 @@
     }
 
     :global(body) {
-        background: var(--black);
+        background: linear-gradient(var(--teal), var(--blue));
         min-height: 100vh;
 
         display: flex;
