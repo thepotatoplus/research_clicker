@@ -37,7 +37,7 @@ setInterval(function() {
 <h1>Upgrades ({currentUpgrades}/6 upgrades)</h1>
 {#if clicks > 9999 && rppcUpgrades >= 1 && scientistrpccupgrades >= 1 && scientistAmount >= 20 && clickbonusupgrades == 0}
     <a on:click={()=> {clicks -= 10000 ; clickbonuspercent += 1 ; clickbonusupgrades += 1}}>Wool Beds - Beds made using wool from sheep. Gives +1% Click Bonus due to more comfortable living conditions. - 10k Research Points</a>
-    {:else if rppcUpgrades >= 1 && scientistrpccupgrades >= 1 && scientistAmount >= 20}
+    {:else if rppcUpgrades >= 1 && scientistrpccupgrades >= 1 && scientistAmount >= 20 && clickbonusupgrades == 0}
         Wool Beds - Beds made using wool from sheep. Gives +1% Click Bonus due to more comfortable living conditions. - 10k Research Points
 {/if}
 <a></a>
