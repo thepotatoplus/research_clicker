@@ -1,5 +1,5 @@
 <script>
-let researchpoints = 1000000;
+let researchpoints = 0;
 let rppc = 1;
 let rpps = 0;
 let rppcUpgrades = 0;
