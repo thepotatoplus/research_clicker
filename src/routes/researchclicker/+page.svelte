@@ -1,6 +1,6 @@
 <script>
 const technologicalProgression = "Stone";
-let researchpoints = 10000000;
+let researchpoints = 0;
 let rppc = 1;
 let rpps = 0;
 let rppcUpgrades = 0;
@@ -31,9 +31,9 @@ let minerUpgrades = 0;
 let stonedelay = 3;
 let stoneperdelay = 1;
 let sps = 0;
-let stone = 1000000;
+let stone = 0;
 
-let wood = 1000000;
+let wood = 0;
 let woodUnlocked = 0;
 let wps = 0;
 let wooddelay = 5;
