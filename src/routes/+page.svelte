@@ -11,13 +11,15 @@
         Potato++ is a website where two brothers make games and put them here so people can
         play them.
     </p>
-    <p><a href="https://github.com/neogloven/ppp">Source Code</a></p>
     <h1>Games</h1>
-    <p><a href="researchclicker">Research Clicker</a></p>
+    <section class='row'>
+        <Button href='researchclicker' content='Research Clicker' icon='/research.svg' />
+    </section>
     <h1>Credits</h1>
     <section class='row'>
         <Button href='https://github.com/thepotatoplus' content='Torin' />
         <Button href='https://github.com/dravenmonti' content='Draven' />
+        <Button href='https://github.com/dravenmonti/ppp' content='Source Code' />
     </section>
 
 </section>

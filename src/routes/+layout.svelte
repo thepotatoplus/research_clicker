@@ -1,3 +1,7 @@
+<h2>
+    <a href='/'>Home</a>
+</h2>
+
 <slot />
 
 <style>
@@ -6,8 +10,7 @@
         --gray: rgb(54, 53, 61);
         --light-gray: rgb(142, 170, 192);
         --white: rgb(240, 246, 253);
-        --blue: rgb(10, 10, 50);
-        --teal: rgb(10, 50, 50);
+        --teal: rgb(27, 28, 36);
         color: var(--white);
 
         font-family: sans-serif;
@@ -18,7 +21,7 @@
     }
 
     :global(body) {
-        background: linear-gradient(var(--teal), var(--blue));
+        background: var(--teal);
         min-height: 100vh;
 
         display: flex;
@@ -41,10 +44,15 @@
     }
 
     :global(img) {
-        width: 64px;
+        width: 128px;
+        height: 128px;
     }
 
     :global(p) {
         margin: 10px;
+    }
+
+    h2 a {
+        text-decoration: none;
     }
 </style>
