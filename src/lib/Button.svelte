@@ -16,12 +16,22 @@
     .hover-true {
         transform: scale(1.2);
     }
+    .icon {
+        background: var(--teal);
+        width: 100%;
+        border-radius: inherit;
+    }
 </style>
 
 <script>
-    export let href, content;
+    export let href, content, icon;
 
     let hover = false;
 </script>
 
-<a class='button hover-{hover}' href={href} on:mouseover={() => hover = true} on:mouseleave={() => hover = false}>{content}</a>
+<a class='button hover-{hover}' href={href} on:mouseover={() => hover = true} on:mouseleave={() => hover = false}>
+    {#if icon}
+        <img src={icon} class='icon'>
+    {/if}
+    {content}
+</a>

@@ -1,5 +1,5 @@
 <script>
-    const technologicalProgression = "Stone";
+    let technologicalProgression = "Stone";
 
     import { Currency, Factory } from "$lib/clicker.js";
     import CurrencyItem from "$lib/CurrencyItem.svelte";
@@ -11,9 +11,9 @@
     };
 
     let currencies = {
-        stone: new Currency("Stone", causeUpdate),
-        wood: new Currency("Wood", causeUpdate),
-        research: new Currency("Research", causeUpdate),
+        stone: new Currency("ROCK", causeUpdate, "stone"),
+        wood: new Currency("WOOD", causeUpdate, "wood"),
+        research: new Currency("TECH", causeUpdate, "research"),
     };
 
     currencies.research.perClick = 1;
@@ -69,17 +69,21 @@
     };
 </script>
 
-<h1>You are in the {technologicalProgression} Age</h1>
+<h1>{technologicalProgression} Age</h1>
 <a
     on:click={() => {
         for (let currency in currencies) {
             currencies[currency].click();
         }
-    }}><img src="/hammer.svg" /></a
+    }}><img src="/research.svg" /></a
 >
-{#each Object.values(currencies) as currency}
-    <CurrencyItem {currency} />
-{/each}
+<p>Click to <b>Research</b></p>
+
+<section class="row">
+    {#each Object.values(currencies) as currency}
+        <CurrencyItem {currency} />
+    {/each}
+</section>
 
 {#each Object.values(upgrades) as upgrade}
     <FactoryItem factory={upgrade} {currencies} />

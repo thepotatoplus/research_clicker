@@ -1,5 +1,5 @@
 class Currency {
-    constructor(name, causeUpdate) {
+    constructor(name, causeUpdate, type) {
         this.name = name;
         this.amount = 0;
         this.perClick = 0;
@@ -11,6 +11,8 @@ class Currency {
         this.causeUpdate = causeUpdate;
 
         this.interval = setInterval(() => { this.tick() }, 200);
+
+        this.type = type;
     }
 
     upgrade({ perClick, delay, perDelay }) {
