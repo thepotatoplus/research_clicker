@@ -4,8 +4,8 @@
 
 <div class="wrapper">
     <img src="/{currency.type}.svg" />
-    <span class="amount bottom right">{Math.round(currency.amount)}X</span>
-    <span class="amount bottom">{Math.round(currency.perClick)}/1CLK</span>
+    <span class="amount bottom right">{Math.floor(currency.amount)}X</span>
+    <span class="amount bottom">{currency.perClick}/1CLK</span>
     <span class="amount">{Math.round(currency.perDelay)}/{Math.round(currency.delay) / 1000}SEC</span>
     <span class="amount right">{currency.name}</span>
 </div>

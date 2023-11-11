@@ -27,7 +27,7 @@
             },
             {
                 research: {
-                    perClick: 1,
+                    perClick: 0,
                     delay: 1,
                     perDelay: 1,
                 },
@@ -38,7 +38,7 @@
         miner: new Factory(
             "Miner",
             {
-                research: 15,
+                stone: 10,
             },
             {
                 stone: {
