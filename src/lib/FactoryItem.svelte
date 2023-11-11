@@ -12,5 +12,5 @@
 </script>
 
 <a href="#" on:click={() => factory.buy(currencies)}>
-    {factory.amount}x {factory.name} (<b>COSTS</b> | {costs})
+    {factory.amount}x {factory.name} (<b>COSTS</b> | {costs}) {factory.canUse ? '' : '(LOCKED)'}
 </a>

@@ -38,16 +38,19 @@ class Currency {
 }
 
 class Factory {
-    constructor(name, costs, upgrades, costInc, causeUpdate) {
+    constructor(name, costs, upgrades, costInc, causeUpdate, isUpgrade) {
         this.name = name;
         this.costs = costs;
         this.upgrades = upgrades;
         this.costInc = costInc;
         this.amount = 0;
         this.causeUpdate = causeUpdate;
+        this.isUpgrade = isUpgrade;
+        this.canUse = true;
     }
 
     buy(currencies) {
+        if (!this.canUse) return;
         for (let currency in this.costs) {
             if (this.costs[currency] > currencies[currency].amount) return;
         }
@@ -59,6 +62,7 @@ class Factory {
         for (let upgrade in this.upgrades) {
             currencies[upgrade].upgrade(this.upgrades[upgrade]);
         }
+        if (this.isUpgrade) this.canUse = false;
         this.amount++;
         this.causeUpdate();
     }

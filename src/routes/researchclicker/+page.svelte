@@ -34,6 +34,22 @@
             1.1,
             causeUpdate
         ),
+        upgrade_test: new Factory(
+            "UpgradeTest",
+            {
+                research: 15,
+            },
+            {
+                research: {
+                    perClick: 0,
+                    delay: 1,
+                    perDelay: 1,
+                },
+            },
+            1.1,
+            causeUpdate,
+            true
+        ),
     };
 </script>
 
