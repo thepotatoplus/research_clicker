@@ -59,7 +59,7 @@ class Factory {
         for (let currency in this.costs) {
             let curr = currencies[currency];
             curr.amount -= this.costs[currency];
-            this.costs[currency] *= this.costInc;
+            this.costs[currency] = Math.round(this.costs[currency] * this.costInc);
         }
         for (let upgrade in this.upgrades) {
             currencies[upgrade].upgrade(this.upgrades[upgrade]);
