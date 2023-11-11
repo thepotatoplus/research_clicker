@@ -3,10 +3,12 @@
 
     import { Currency, Factory } from "$lib/clicker.js";
     import CurrencyItem from "$lib/CurrencyItem.svelte";
+    import FactoryItem from "$lib/FactoryItem.svelte";
 
     let causeUpdate = () => {
-        currencies = {...currencies};
-    }
+        currencies = { ...currencies };
+        upgrades = { ...upgrades };
+    };
 
     let currencies = {
         stone: new Currency("Stone", causeUpdate),
@@ -22,13 +24,15 @@
             {
                 research: 15,
             },
-            [
-                {
+            {
+                research: {
                     perClick: 0,
+                    delay: 1,
                     perDelay: 1,
-                    rate: 0,
                 },
-            ]
+            },
+            1.1,
+            causeUpdate
         ),
     };
 </script>
@@ -40,8 +44,9 @@
     }}><img src="/hammer.svg" /></a
 >
 {#each Object.values(currencies) as currency}
-    <CurrencyItem currency={currency}>
-        {currency.amount}x {currency.name} ({currency.perClick} / click) ({currency.perDelay}
-        / {currency.delay / 1000} sec)
-    </CurrencyItem>
+    <CurrencyItem {currency} />
+{/each}
+
+{#each Object.values(upgrades) as upgrade}
+    <FactoryItem factory={upgrade} {currencies} />
 {/each}

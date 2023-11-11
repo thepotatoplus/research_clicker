@@ -10,16 +10,17 @@ class Currency {
 
         this.causeUpdate = causeUpdate;
 
-        this.interval = setInterval(this.tick, 50);
+        this.interval = setInterval(() => { this.tick() }, 200);
     }
 
-    upgrade({ perClick, delay, rate }) {
+    upgrade({ perClick, delay, perDelay }) {
         this.perClick += perClick;
-        this.delay -= delay;
-        this.rate /= rate;
+        this.delay /= delay;
+        this.perDelay += perDelay;
 
         clearInterval(this.interval);
-        this.interval = setInterval(this.tick, 50);
+        this.interval = setInterval(() => { this.tick() }, 200);
+        this.causeUpdate();
     }
 
     click() {
@@ -28,7 +29,7 @@ class Currency {
     }
 
     tick() {
-        this.ticks += 50;
+        this.ticks += 200;
         this.amount += Math.floor(this.ticks / this.delay) * this.perDelay;
         this.ticks = this.ticks % this.delay;
         if (!this.causeUpdate) return;
@@ -37,11 +38,13 @@ class Currency {
 }
 
 class Factory {
-    constructor(name, costs, upgrades, costInc) {
+    constructor(name, costs, upgrades, costInc, causeUpdate) {
         this.name = name;
         this.costs = costs;
         this.upgrades = upgrades;
         this.costInc = costInc;
+        this.amount = 0;
+        this.causeUpdate = causeUpdate;
     }
 
     buy(currencies) {
@@ -56,6 +59,8 @@ class Factory {
         for (let upgrade in this.upgrades) {
             currencies[upgrade].upgrade(this.upgrades[upgrade]);
         }
+        this.amount++;
+        this.causeUpdate();
     }
 }
 
