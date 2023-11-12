@@ -22,6 +22,8 @@
 
         left: 0;
         top: 0;
+
+        filter: drop-shadow(1.5px 1.5px 0 var(--black));
     }
 
     .right {
