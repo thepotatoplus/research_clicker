@@ -11,9 +11,11 @@
     };
 
     let currencies = {
+        research: new Currency("TECH", causeUpdate, "research"),
         stone: new Currency("ROCK", causeUpdate, "stone"),
         wood: new Currency("WOOD", causeUpdate, "wood"),
-        research: new Currency("TECH", causeUpdate, "research"),
+        land: new Currency("LAND", causeUpdate, "land"),
+        dirt: new Currency("DIRT", causeUpdate, "dirt"),
     };
 
     currencies.research.perClick = 1;
@@ -54,6 +56,23 @@
             "Rock Finding",
             {
                 research: 15,
+            },
+            {
+                stone: {
+                    perClick: 0.1,
+                    delay: 1,
+                    perDelay: 0,
+                },
+            },
+            1.1,
+            causeUpdate,
+            true
+        ),
+        stonetools: new Factory(
+            "Stone Tools",
+            {
+                research: 100,
+                stone: 50,
             },
             {
                 stone: {
